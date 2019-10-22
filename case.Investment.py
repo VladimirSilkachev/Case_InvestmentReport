@@ -17,7 +17,7 @@ for year in range (1, years + 1):
     print("-------------------------------------------")
     c = initial_capital + sum_
     for month in range(1,13):
-        print('|  ', month, '  |   {0:.2f}   |   {1:.2f}   |   {2:.2f}   |'.format(initial_capital,sum_,c))
+        print('|  ', month, '  | {0:>.2f}   |   {1:>.2f}  | {2:>.2f}  |'.format(initial_capital,sum_,c))
         #c += investment_infusion
         initial_capital += (sum_ + investment_infusion)
         sum_ = (initial_capital / 100) * percent
