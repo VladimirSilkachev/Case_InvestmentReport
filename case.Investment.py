@@ -1,19 +1,20 @@
 """Case-study #3 Investment report
 Developers:
-Silkachev (35%), Vinnikov (45%), Popov (35%).
+Silkachev (35%), Vinnikov (45%), Popov (28%).
 
 """
+import local as lc
 month = 0
-years = int(input("Срок размещения капитала (лет):"))
-initial_capital = float(input("Начальный капитал ($):"))
-percent = float(input("Процентная ставка (%/мес.):"))
-investment_infusion = float(input("Инвестиционные вливания ($/мес.):"))
+years = int(input(lc.years_capital))
+initial_capital = float(input(lc.initial_capital))
+percent = float(input(lc.rate))
+investment_infusion = float(input(lc.additive))
 sum_ = (percent / 100) * initial_capital
 for year in range(1, years + 1):
-    print(year, "год")
+    print(year, lc.year)
     print("-----------------------------------------------------")
-    print("|         |    основа    |   сумма %    |           |")
-    print("|  месяц  |  инвестиций  |   за месяц   |  капитал  |")
+    print(lc.first_str)
+    print(lc.second_str)
     print("-----------------------------------------------------")
     c = initial_capital + sum_
     for month in range(1, 13):
